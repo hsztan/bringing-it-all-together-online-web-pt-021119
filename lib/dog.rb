@@ -20,7 +20,7 @@ class Dog
 
   def self.create(attr)
     dog = self.new(attr)
-    binding.pry
+    dog.save
   end
 
   def self.create_table
