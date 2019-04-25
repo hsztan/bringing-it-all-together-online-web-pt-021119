@@ -52,7 +52,7 @@ class Dog
       LIMIT 1
       SQL
     row = DB[:conn].execute(sql, name)
-    self.new_from_db(row[0])
+    self.new_from_db(row[0]) unless row.empty?
   end
 
   def self.create_table
